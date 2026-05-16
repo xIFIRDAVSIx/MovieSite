@@ -215,16 +215,16 @@ export default function MoviePage() {
 
                 <div className="movieInfoBlock">
                     <h1>{movie.title}</h1>
-                    <p>★ {movie.vote_average?.toFixed(1)}</p>
+                    <p className="ratingGlow">★ {movie.vote_average?.toFixed(1)}</p>
                     <p>{movie.overview}</p>
 
                     {trailer && (
-                        <button onClick={() => setOpenTrailer(true)}>
-                            ▶ Trailer
+                        <button className="trailerBtn" onClick={() => setOpenTrailer(true)}>
+                            ▶ Watch Trailer
                         </button>
                     )}
 
-                    <button onClick={addToList}>
+                    <button className="btnSecondary" onClick={addToList}>
                         + Save
                     </button>
                 </div>
